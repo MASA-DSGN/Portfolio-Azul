@@ -1,0 +1,179 @@
+/* Estilos generales */
+:root {
+    --primary-color: #3a86ff;
+    --secondary-color: #8338ec;
+    --accent-color: #ff006e;
+    --dark-bg: #121212;
+    --darker-bg: #0a0a0a;
+    --light-text: #f8f9fa;
+    --gray-text: #adb5bd;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--dark-bg);
+    color: var(--light-text);
+    line-height: 1.6;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section {
+    padding: 5rem 0;
+    position: relative;
+}
+
+h1, h2, h3 {
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+h1 {
+    font-size: 3rem;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: var(--light-text);
+    display: inline-block;
+    margin-bottom: 2rem;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+}
+
+h3 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+}
+
+p {
+    margin-bottom: 1.5rem;
+    color: var(--gray-text);
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--secondary-color);
+}
+
+/* Header */
+header {
+    padding: 1.5rem 0;
+    background-color: rgba(10, 10, 10, 0.8);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+}
+
+/* Language Selector */
+.language-selector {
+    position: relative;
+    cursor: pointer;
+}
+
+.selected-language {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+.language-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: var(--darker-bg);
+    border-radius: 4px;
+    overflow: hidden;
+    display: none;
+    z-index: 10;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.language-dropdown li {
+    padding: 0.75rem 1.5rem;
+    transition: var(--transition);
+    list-style: none;
+}
+
+.language-dropdown li:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.language-dropdown li.active {
+    background-color: rgba(58, 134, 255, 0.2);
+}
+
+/* Hero Section */
+#hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 80px;
+}
+
+#hero .container {
+    flex-direction: column;
+}
+
+#hero h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+#hero p {
+    font-size: 1.5rem;
+    max-width: 700px;
+    margin: 0 auto 2rem;
+}
