@@ -1,0 +1,32 @@
+<svg width="200" height="80" viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fondo de nebulosa -->
+  <defs>
+    <radialGradient id="nebulaGradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="#3a86ff" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#8338ec" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#ff006e" stop-opacity="0.3"/>
+    </radialGradient>
+  </defs>
+  
+  <!-- Forma de ola delgada -->
+  <path d="M10,40 C30,20 50,60 70,30 C90,10 110,50 130,25 C150,5 170,45 190,30" 
+        fill="none" 
+        stroke="url(#nebulaGradient) " 
+        stroke-width="2" 
+        stroke-linecap="round"/>
+  
+  <!-- Pequeñas esferas plateadas -->
+  <circle cx="30" cy="30" r="2" fill="#e0e0e0"/>
+  <circle cx="70" cy="30" r="2" fill="#e0e0e0"/>
+  <circle cx="110" cy="25" r="2" fill="#e0e0e0"/>
+  <circle cx="150" cy="20" r="2" fill="#e0e0e0"/>
+  <circle cx="190" cy="30" r="2" fill="#e0e0e0"/>
+  
+  <!-- Texto MASA -->
+  <text x="50%" y="55" 
+        font-family="'Segoe UI', Arial, sans-serif" 
+        font-size="32" 
+        font-weight="bold" 
+        text-anchor="middle" 
+        fill="#ffffff">MASA</text>
+</svg>
